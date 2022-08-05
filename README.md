@@ -1,5 +1,14 @@
 # template
 
+A Vue3 (Babel, Vuex, Router) template to start projects faster.
+
+Includes:
+- uuid
+- FontAwesome
+- Normalize CSS
+- Router transitions
+- basic responsiveness
+
 ## Project setup
 ```
 yarn install
