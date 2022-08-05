@@ -1,18 +1,38 @@
 <template>
+
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <TestComponent />
+
+    <teleport to="#modal-root">
+      <Modal v-if="isModalActive">
+        <template v-slot:header>Modal</template>
+        <template v-slot:default>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</template>
+        <template v-slot:footer>That was great wasn't it!</template>
+      </Modal>
+    </teleport>
+
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Modal from "@/components/tools/Modal";
+import TestComponent from "@/components/TestComponent";
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
-  }
+    Modal,
+    TestComponent,
+  },
 }
 </script>
+
+<style scoped>
+
+.home {
+
+}
+
+</style>

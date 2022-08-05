@@ -1,0 +1,9 @@
+:root {
+
+    --scrollbar-width: .3em;
+
+    --responsive-spacing: max(.5em, 2vw);
+    --responsive-width: min(900px, 95vw);
+
+}
+
