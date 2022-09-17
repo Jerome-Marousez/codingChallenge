@@ -1,30 +1,19 @@
 <template>
 
-  <nav>
-    <router-link to="/">Home</router-link>
-  </nav>
-
   <router-view v-slot="{ Component, route }">
-    <transition name="fade" mode="out-in">
-      <Component :is="Component" :key="route.fullPath"/>
+    <transition :name="route.meta.transition || 'fade'" mode="out-in">
+      <Component :is="Component" :key="$route.fullPath"/>
     </transition>
   </router-view>
 
 </template>
 
-<style>
+<style scoped>
 @import 'styles/custom-properties.css';
 @import 'styles/normalize.css';
-@import 'styles/layout.css';
-
-@font-face {
-  font-family: main;
-  src: url('@/assets/fonts/main.ttf');
-}
-
-* {
-  font-family: main;
-}
+@import 'styles/style.css';
+@import 'styles/theme_light.css';
+@import 'styles/theme_dark.css';
 
 .fade-enter-from,
 .fade-leave-to {

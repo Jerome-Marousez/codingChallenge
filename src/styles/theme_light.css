@@ -1,0 +1,8 @@
+:root.light {
+
+    --bg-primary: hsl(0, 0%, 98%);
+    --bg-secondary: hsl(0, 0%, 100%);
+    --text-color: hsl(200, 15%, 8%);
+    --text-grey: hsl(0, 0%, 52%);
+
+}

@@ -1,0 +1,8 @@
+:root.dark {
+
+    --bg-primary: hsl(207, 26%, 17%);
+    --bg-secondary: hsl(209, 23%, 22%);
+    --text-color: hsl(0, 0%, 100%);
+    --text-grey: hsl(0, 0%, 100%);
+
+}

@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: Nunito;
+    src: url('@/assets/fonts/NunitoSans-Regular.ttf');
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+a.router-link-exact-active {
+    color: var(--text-color);
+}
+
+:root {
+    --desktop-width: 1440px;
+    --mobile-width: 375px;
+    --text-size: 1em;
+}
+* {
+    user-select: none;
+}
+body {
+    font-size: var(--text-size);
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    transition: all .3s linear;
+    font-family: Nunito;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: .3em;
+}
+
+.disabled {
+    opacity: .5;
+}
+
+input[type="text"] {
+    background-color: var(--bg-secondary);
+    border: none;
+    outline: none;
+    border-radius: .3em;
+    padding-block: 1em;
+    padding-inline: 2em;
+    color: var(--text-color);
+}
+input::placeholder {
+    color: var(--text-grey);
+    font-size: 1em;
+}
+
+select {
+    position: relative;
+    background-color: var(--bg-secondary);
+    border: none;
+    outline: none;
+    border-radius: .3em;
+    padding-block: 1em;
+    padding-inline: 2em;
+    color: var(--text-color);
+    cursor: pointer;
+}
+option {
+    border: none;
+    outline: none;
+}
+option:first-child {
+    border-top-left-radius: .3em;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    color: var(--text-color);
+}
+
+.btn-with-icon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1em;
+    background-color: var(--bg-secondary);
+    box-shadow: 0 0 .3em .3em rgba(0, 0, 0, .1);
+    padding-inline: 2em;
+    padding-block: .8em;
+    border-radius: .3em;
+    margin-block: 2em;
+}
+.btn-with-icon:hover {
+    box-shadow: none;
+}
+
+.btn-border {
+    background-color: var(--bg-secondary);
+    box-shadow: 0 0 .3em .3em rgba(0, 0, 0, .1);
+    padding-inline: 1em;
+    padding-block: .5em;
+    border-radius: .3em;
+    margin: .3em;
+}
+.btn-border:hover {
+    box-shadow: none;
+}
+
+
+/* ========================
+    SCROLLBAR
+=========================*/
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 100vw;
+    margin-block: var(--scrollbar-width);
+    margin-inline: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 100vw;
+}
+
+/* FIREFOX SUPPORT */
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: grey transparent;
+    }
+}
